@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidade Ativa - Ocorrências</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="cidade-ativa.png" alt="Cidade Ativa">
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="ocorrencias.html" class="ativo">Ocorrências</a>
+  </nav>
+
+  <main>
+
+    <!-- Filtro -->
+    <section class="caixa">
+      <h2>Ocorrências</h2>
+      <label for="filtro">Filtrar por tipo</label>
+      <select id="filtro">
+        <option value="">Todas</option>
+        <option value="1">Falta de água</option>
+        <option value="2">Falta de saneamento</option>
+        <option value="3">Esgoto exposto</option>
+        <option value="4">Saneamento básico</option>
+      </select>
+    </section>
+
+    <!-- Lista -->
+    <div id="lista"></div>
+
+  </main>
+
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

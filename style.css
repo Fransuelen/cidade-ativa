@@ -1,0 +1,159 @@
+/* Estilo do projeto Cidade Ativa */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #eef5f7;
+  color: #222;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #0c4a6e;
+}
+
+header img {
+  width: 100%;      /* ocupa toda a largura da tela */
+  height: auto;
+  max-height: 350px;   /* limite de altura para não ficar grande demais */
+  object-fit: cover;   /* corta as sobras sem esticar a imagem */
+  display: block;      /* tira o espacinho embaixo da imagem */
+}
+
+/* Menu */
+nav {
+  background-color: #0f766e;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.ativo {
+  border-bottom: 2px solid white;
+}
+
+/* Conteúdo */
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.caixa {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #0c4a6e;
+  margin-top: 0;
+}
+
+/* Formulário */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #0f766e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0b5550;
+}
+
+/* Resumo */
+.resumo {
+  display: flex;
+  gap: 10px;
+}
+
+.numero {
+  flex: 1;
+  background-color: #d9f0ed;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.numero strong {
+  display: block;
+  font-size: 25px;
+  color: #0f766e;
+}
+
+/* Cada ocorrência da lista */
+.ocorrencia {
+  border-left: 5px solid #0c4a6e;
+}
+
+.tipo-1 { border-left-color: blue; }
+.tipo-2 { border-left-color: orange; }
+.tipo-3 { border-left-color: brown; }
+.tipo-4 { border-left-color: green; }
+
+.etiqueta {
+  background-color: #ddd;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.local {
+  color: gray;
+  font-size: 14px;
+}
+
+.botao-apoiar {
+  background-color: #0c4a6e;
+  font-size: 13px;
+}
+
+.botao-apagar {
+  background-color: #b91c1c;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: gray;
+  font-size: 13px;
+  padding: 15px;
+}
+
+/* Celular */
+@media (max-width: 500px) {
+  .resumo {
+    flex-direction: column;
+  }
+}

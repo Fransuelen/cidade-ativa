@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidade Ativa - Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="cidade-ativa.png" alt="Cidade Ativa">
+  </header>
+
+  <nav>
+    <a href="index.html" class="ativo">Início</a>
+    <a href="ocorrencias.html">Ocorrências</a>
+  </nav>
+
+  <main>
+
+    <!-- Resumo -->
+    <section class="caixa">
+      <h2>Resumo</h2>
+      <div class="resumo">
+        <div class="numero">
+          <strong id="total">0</strong>
+          ocorrências
+        </div>
+        <div class="numero">
+          <strong id="abertas">0</strong>
+          abertas
+        </div>
+        <div class="numero">
+          <strong id="apoios">0</strong>
+          apoios
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulário -->
+    <section class="caixa">
+      <h2>Registrar ocorrência</h2>
+      <form id="formulario">
+        <label for="tipo">Tipo do problema</label>
+        <select id="tipo">
+          <option value="1">Falta de água</option>
+          <option value="2">Falta de saneamento</option>
+          <option value="3">Esgoto exposto</option>
+          <option value="4">Saneamento básico</option>
+        </select>
+
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" placeholder="Ex.: Centro">
+
+        <label for="rua">Rua ou local</label>
+        <input type="text" id="rua" placeholder="Ex.: Rua Rui Barbosa">
+
+        <label for="descricao">O que está acontecendo?</label>
+        <textarea id="descricao" rows="3" placeholder="Descreva o problema"></textarea>
+
+        <button type="submit">Enviar ocorrência</button>
+      </form>
+    </section>
+
+  </main>
+
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
