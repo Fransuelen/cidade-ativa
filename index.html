@@ -8,38 +8,72 @@
 </head>
 <body>
 
-  <header>
-    <img src="cidade-ativa.png" alt="Cidade Ativa">
+  <!-- Barra superior -->
+  <header class="topo">
+    <a href="index.html" class="marca">
+      <svg class="marca-icone" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C8 7 5 10.5 5 14a7 7 0 0 0 14 0c0-3.5-3-7-7-12z" fill="#0e7490"/>
+        <path d="M9 15l1.5-4 1.5 3 1.5-3 1.5 4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+      </svg>
+      <span>
+        <strong>Cidade Ativa</strong>
+        <small>Da informação à solução</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="index.html" class="ativo">Início</a>
+      <a href="ocorrencias.html">Ocorrências</a>
+    </nav>
+
+    <a href="#registrar" class="botao-destaque">&#9998; Registrar ocorrência</a>
   </header>
 
-  <nav>
-    <a href="index.html" class="ativo">Início</a>
-    <a href="ocorrencias.html">Ocorrências</a>
-  </nav>
+  <!-- Banner -->
+  <section class="hero">
+    <div class="hero-texto">
+      <h1>Da informação<br>à solução.</h1>
+      <p>Registre problemas de água e saneamento no seu bairro e acompanhe tudo em um só lugar, por uma cidade mais saudável.</p>
+      <a href="ocorrencias.html" class="botao-destaque">Consultar ocorrências &rarr;</a>
+    </div>
+  </section>
 
   <main>
 
-    <!-- Resumo -->
-    <section class="caixa">
-      <h2>Resumo</h2>
-      <div class="resumo">
-        <div class="numero">
-          <strong id="total">0</strong>
-          ocorrências
+    <div class="grade">
+      <!-- Ocorrências recentes -->
+      <section class="caixa">
+        <div class="caixa-titulo">
+          <h2>Ocorrências recentes</h2>
+          <a href="ocorrencias.html">Ver todas &rarr;</a>
         </div>
-        <div class="numero">
-          <strong id="abertas">0</strong>
-          abertas
+        <ul id="recentes" class="recentes"></ul>
+      </section>
+
+      <!-- Resumo -->
+      <section class="caixa">
+        <div class="caixa-titulo">
+          <h2>Resumo</h2>
         </div>
-        <div class="numero">
-          <strong id="apoios">0</strong>
-          apoios
+        <div class="resumo">
+          <div class="numero">
+            <strong id="total">0</strong>
+            ocorrências
+          </div>
+          <div class="numero">
+            <strong id="abertas">0</strong>
+            abertas
+          </div>
+          <div class="numero">
+            <strong id="apoios">0</strong>
+            apoios
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- Formulário -->
-    <section class="caixa">
+    <section class="caixa" id="registrar">
       <h2>Registrar ocorrência</h2>
       <form id="formulario">
         <label for="tipo">Tipo do problema</label>
@@ -65,8 +99,15 @@
 
   </main>
 
-  
-  
+  <!-- Faixa do rodapé -->
+  <footer class="faixa">
+    <div class="selos">
+      <div class="selo"><span class="selo-icone">&#128737;</span> Mais segurança<br>para a população</div>
+      <div class="selo"><span class="selo-icone">&#128167;</span> Qualidade da água<br>em dia</div>
+      <div class="selo"><span class="selo-icone">&#127807;</span> Uma cidade<br>mais sustentável</div>
+    </div>
+    <p class="lema">Juntos por uma cidade mais segura e sustentável!</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

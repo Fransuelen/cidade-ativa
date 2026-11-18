@@ -1,9 +1,5 @@
-// JavaScript do projeto Cidade Ativa
-// Esse arquivo é usado nas duas páginas (index.html e ocorrencias.html).
-// Os dados ficam salvos no localStorage do navegador.
-// As tabelas do banco estão modeladas no arquivo banco.sql
 
-// Tabela "tipos"
+
 let tipos = {
   1: "Falta de água",
   2: "Falta de saneamento",
@@ -74,6 +70,11 @@ function mostrar() {
   if (quantidade == 0) {
     lista.innerHTML = "<p>Nenhuma ocorrência encontrada.</p>";
   }
+
+  // atualiza os pinos do mapa (mapa.js)
+  if (typeof desenharPinos == "function") {
+    desenharPinos();
+  }
 }
 
 // Calcula os números do resumo
@@ -91,6 +92,44 @@ function atualizarResumo() {
   document.getElementById("total").textContent = ocorrencias.length;
   document.getElementById("abertas").textContent = abertas;
   document.getElementById("apoios").textContent = apoios;
+}
+
+// Ícone de cada tipo de problema
+let icones = {
+  1: "💧",
+  2: "⚠️",
+  3: "🚧",
+  4: "🚰"
+};
+
+// Classe da pílula colorida de acordo com a situação
+function classeSituacao(situacao) {
+  if (situacao == "Em andamento") return "situacao-andamento";
+  if (situacao == "Resolvida") return "situacao-resolvida";
+  return "situacao-aberta";
+}
+
+// Mostra as 3 ocorrências mais novas na página inicial
+function mostrarRecentes() {
+  let recentes = document.getElementById("recentes");
+  recentes.innerHTML = "";
+
+  for (let i = ocorrencias.length - 1; i >= 0 && i >= ocorrencias.length - 3; i--) {
+    let o = ocorrencias[i];
+    let li = document.createElement("li");
+
+    li.innerHTML =
+      "<span class='icone'>" + icones[o.tipo_id] + "</span>" +
+      "<div class='info'><strong>" + tipos[o.tipo_id] + "</strong><span>" + o.bairro + "</span></div>" +
+      "<div class='lado'><span class='situacao " + classeSituacao(o.situacao) + "'>" + o.situacao + "</span>" +
+      "<span class='data'>" + o.criada_em + "</span></div>";
+
+    recentes.appendChild(li);
+  }
+
+  if (ocorrencias.length == 0) {
+    recentes.innerHTML = "<li>Nenhuma ocorrência registrada ainda.</li>";
+  }
 }
 
 // Botão de apoiar
@@ -155,6 +194,7 @@ function enviar(evento) {
   ocorrencias.push(nova);
   salvar();
   atualizarResumo();
+  mostrarRecentes();
 
   formulario.reset();
   alert("Ocorrência salva! Veja na página Ocorrências.");
@@ -167,6 +207,7 @@ carregar();
 if (formulario != null) {
   formulario.addEventListener("submit", enviar);
   atualizarResumo();
+  mostrarRecentes();
 }
 
 // Página de ocorrências: tem a lista e o filtro
