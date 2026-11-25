@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cidade Ativa - Ocorrências</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,10 +11,7 @@
   <!-- Barra superior -->
   <header class="topo">
     <a href="index.html" class="marca">
-      <svg class="marca-icone" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2C8 7 5 10.5 5 14a7 7 0 0 0 14 0c0-3.5-3-7-7-12z" fill="#0e7490"/>
-        <path d="M9 15l1.5-4 1.5 3 1.5-3 1.5 4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-      </svg>
+      <img src="logo.webp" alt="Logo Cidade Ativa" class="marca-icone">
       <span>
         <strong>Cidade Ativa</strong>
         <small>Da informação à solução</small>
@@ -47,7 +43,9 @@
 
     <!-- Mapa -->
     <section class="caixa">
-      <div id="mapa"></div>
+      <h2>Mapa de Matão - SP</h2>
+      <img src="mapa-matao.webp" alt="Mapa da cidade de Matão - SP com os bairros" class="mapa-cidade">
+      <p class="credito">Mapa: &copy; colaboradores do OpenStreetMap</p>
     </section>
 
     <!-- Lista -->
@@ -55,8 +53,6 @@
 
   </main>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="script.js"></script>
-  <script src="mapa.js"></script>
 </body>
 </html>

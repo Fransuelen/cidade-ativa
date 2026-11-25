@@ -47,8 +47,8 @@ body {
 }
 
 .marca-icone {
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
 }
 
 .marca strong {
@@ -449,20 +449,4 @@ button:hover {
 .credito {
   font-size: 12px;
   color: #6b7c88;
-}
-
-/* ===== Mapa ===== */
-#mapa {
-  height: 460px;
-  border-radius: 10px;
-}
-
-/* pino com emoji */
-.pino {
-  font-size: 24px;
-  text-align: center;
-}
-
-@media (max-width: 560px) {
-  #mapa { height: 340px; }
 }

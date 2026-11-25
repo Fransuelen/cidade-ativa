@@ -70,11 +70,6 @@ function mostrar() {
   if (quantidade == 0) {
     lista.innerHTML = "<p>Nenhuma ocorrência encontrada.</p>";
   }
-
-  // atualiza os pinos do mapa (mapa.js)
-  if (typeof desenharPinos == "function") {
-    desenharPinos();
-  }
 }
 
 // Calcula os números do resumo
