@@ -103,7 +103,7 @@ nav a.ativo {
   min-height: 340px;
   background-image:
     linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.55) 35%, rgba(255, 255, 255, 0) 55%),
-    url("cidade-ativa.png");
+    url("cidade-ativa.webp");
   background-size: cover;
   background-position: right center;
   display: flex;
@@ -422,7 +422,7 @@ button:hover {
     min-height: 380px;
     background-image:
       linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.2) 100%),
-      url("cidade-ativa.png");
+      url("cidade-ativa.webp");
     background-position: left center;   /* mostra só a cidade, sem o logo atrás do texto */
   }
 
@@ -440,70 +440,27 @@ button:hover {
   }
 }
 
-/* ===== Mapa (mesmo visual do ReportAgua) ===== */
-#mapa {
-  height: 460px;
-  border: 1px solid #d5dee4;
+/* ===== Imagem do mapa de Matão (página inicial) ===== */
+.mapa-cidade {
+  width: 100%;
   border-radius: 10px;
 }
 
-.leaflet-container {
-  background: #d7e3ea;
-  font-family: inherit;
+.credito {
   font-size: 12px;
+  color: #6b7c88;
 }
 
-.leaflet-marker-icon.pino-icone {
-  background: transparent !important;
-  border: none !important;
+/* ===== Mapa ===== */
+#mapa {
+  height: 460px;
+  border-radius: 10px;
 }
 
-.pino-icone .pino-svg {
-  display: block;
-  filter: drop-shadow(0 1px 1.5px rgba(15, 23, 42, 0.28));
-}
-
-.leaflet-tooltip.dica-mapa {
-  border: 1px solid #e1e7eb;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 6px 16px rgba(18, 32, 43, 0.08);
-  color: #12202b;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 8px;
-}
-
-.leaflet-tooltip.dica-mapa::before {
-  border-top-color: #fff;
-}
-
-.leaflet-control-zoom {
-  border: none !important;
-  box-shadow: 0 1px 2px rgba(18, 32, 43, 0.08) !important;
-}
-
-.leaflet-control-zoom a {
-  width: 32px !important;
-  height: 32px !important;
-  line-height: 32px !important;
-  color: #0c4a6e !important;
-  border: 1px solid #e1e7eb !important;
-  background: #fff !important;
-}
-
-.leaflet-control-zoom a:first-child { border-radius: 8px 8px 0 0 !important; }
-.leaflet-control-zoom a:last-child { border-radius: 0 0 8px 8px !important; }
-
-.leaflet-control-attribution {
-  max-width: min(280px, 46vw);
-  background: rgba(255, 255, 255, 0.92) !important;
-  color: #4b5e6c !important;
-  font-size: 10px !important;
-}
-
-.leaflet-control-attribution a {
-  color: #0c4a6e !important;
+/* pino com emoji */
+.pino {
+  font-size: 24px;
+  text-align: center;
 }
 
 @media (max-width: 560px) {
